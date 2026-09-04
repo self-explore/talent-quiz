@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>天赋潜能测评 - 发现你的天赋密码</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== 着陆页 ==================== -->
+  <div id="landing-page">
+    <!-- Hero 区域 -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">发现你的天赋密码</h1>
+        <div class="hero-badges">
+          <span class="badge">职业深度版</span>
+          <span class="badge">基于多元智能理论</span>
+        </div>
+        <p class="hero-desc">每个人都有独特的天赋组合。本测试基于加德纳多元智能理论、盖洛普优势理念与霍兰德职业兴趣理论，帮你科学定位优势，并给出可落地的成长与职业建议。</p>
+        <button class="btn-primary btn-large" onclick="scrollToBottom()">开始探索</button>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-value">7-9</span>
+            <span class="stat-label">分钟完成</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">50</span>
+            <span class="stat-label">道题目</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">10</span>
+            <span class="stat-label">天赋维度</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">100%</span>
+            <span class="stat-label">隐私保护</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 十大天赋维度 -->
+    <section class="section dimensions-section">
+      <div class="section-card">
+        <h2 class="section-title">
+          <span class="section-icon">+</span>
+          十大天赋维度
+        </h2>
+        <p class="section-subtitle">基于加德纳多元智能理论并扩展创造与美学维度，全面评估你的能力倾向</p>
+        <div class="dimensions-grid" id="dimensions-grid"></div>
+      </div>
+    </section>
+
+    <!-- 天赋类型 -->
+    <section class="section types-section">
+      <div class="section-card">
+        <h2 class="section-title">
+          <span class="section-icon">✦</span>
+          发现你的天赋类型
+        </h2>
+        <p class="section-subtitle">测试会根据你的天赋组合，给出专属的类型分析与职业匹配</p>
+        <div class="types-list" id="types-list"></div>
+      </div>
+    </section>
+
+    <!-- 底部 CTA -->
+    <section class="section cta-section">
+      <div class="section-card cta-card">
+        <h2 class="cta-title">准备好发现你的天赋了吗？</h2>
+        <p class="cta-desc">凭直觉作答，没有对错之分。答案仅保存在你的设备本地。</p>
+        <button class="btn-primary btn-large" onclick="startQuiz()">开始测试</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== 测试页面 ==================== -->
+  <div id="quiz-page" style="display:none;">
+    <div class="quiz-header">
+      <button class="btn-back" onclick="confirmExit()">‹ 返回</button>
+      <span class="quiz-title" id="quiz-title">天赋潜能测评 · 1/50</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+    <div class="quiz-content">
+      <div class="question-card">
+        <div class="question-number" id="question-number">QUESTION 1 / 50</div>
+        <h3 class="question-text" id="question-text"></h3>
+        <p class="question-hint">请根据你的真实情况选择：<br>非常不像我 &nbsp; 不太像我 &nbsp; 一般/不确定 &nbsp; 比较像我 &nbsp; 非常像我</p>
+        <div class="options-list" id="options-list"></div>
+      </div>
+      <div class="quiz-nav">
+        <button class="btn-nav btn-prev" id="btn-prev" onclick="prevQuestion()">‹ 上一题</button>
+        <button class="btn-nav btn-next" id="btn-next" onclick="nextQuestion()">下一题 ›</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 结果页面 ==================== -->
+  <div id="result-page" style="display:none;">
+    <div class="result-header">
+      <button class="btn-back" onclick="goHome()">‹ 返回首页</button>
+      <span class="quiz-title">测评结果</span>
+    </div>
+    <div class="result-content" id="result-content"></div>
+  </div>
+
+  <!-- 退出确认弹窗 -->
+  <div id="exit-modal" class="modal-overlay" style="display:none;">
+    <div class="modal-box">
+      <h3>确定退出测试吗？</h3>
+      <p>当前作答进度将丢失。</p>
+      <div class="modal-actions">
+        <button class="btn-modal-cancel" onclick="closeModal()">取消</button>
+        <button class="btn-modal-confirm" onclick="exitQuiz()">确定退出</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="quiz-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
