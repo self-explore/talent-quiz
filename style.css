@@ -255,7 +255,7 @@ body {
 /* ==================== 测试页面 ==================== */
 .quiz-header {
   background: linear-gradient(135deg, #7c5cfc, #8b6cff);
-  padding: 14px 16px;
+  padding: 10px 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -268,9 +268,9 @@ body {
   background: rgba(255,255,255,0.2);
   border: none;
   color: #ffffff;
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 13px;
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -301,57 +301,57 @@ body {
 
 .quiz-content {
   background: #f5f3ff;
-  min-height: calc(100vh - 56px);
-  padding: 20px 16px 30px;
+  min-height: calc(100vh - 48px);
+  padding: 10px 14px 12px;
   max-width: 520px;
   margin: 0 auto;
 }
 
 .question-card {
   background: #ffffff;
-  border-radius: 18px;
-  padding: 28px 22px;
+  border-radius: 16px;
+  padding: 16px 16px;
   box-shadow: 0 6px 24px rgba(109,76,246,0.08);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .question-number {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   color: #7c5cfc;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
 }
 
 .question-text {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   color: #1f2937;
-  line-height: 1.5;
-  margin-bottom: 16px;
+  line-height: 1.35;
+  margin-bottom: 10px;
 }
 
 .question-hint {
-  font-size: 13px;
+  font-size: 11px;
   color: #9ca3af;
-  line-height: 1.6;
-  margin-bottom: 24px;
-  padding: 12px 14px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  padding: 6px 10px;
   background: #faf9ff;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .options-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 7px;
 }
 
 .option-item {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 16px 18px;
+  gap: 9px;
+  padding: 9px 12px;
   background: #faf9ff;
   border: 2px solid #f0edff;
   border-radius: 14px;
@@ -371,8 +371,8 @@ body {
 }
 
 .option-radio {
-  width: 22px;
-  height: 22px;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   border: 2px solid #d1d5db;
   display: flex;
@@ -389,28 +389,28 @@ body {
 
 .option-item.selected .option-radio::after {
   content: '';
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #ffffff;
 }
 
 .option-label {
-  font-size: 16px;
+  font-size: 14px;
   color: #374151;
   font-weight: 500;
 }
 
 .quiz-nav {
   display: flex;
-  gap: 12px;
+  gap: 10px;
 }
 
 .btn-nav {
   flex: 1;
-  padding: 16px;
-  border-radius: 14px;
-  font-size: 16px;
+  padding: 11px;
+  border-radius: 12px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
   border: none;
@@ -677,6 +677,17 @@ body {
     font-size: 24px;
   }
   .question-text {
-    font-size: 18px;
+    font-size: 15px;
   }
+}
+
+/* 矮屏设备：进一步压缩，确保答题页一屏显示无需滚动 */
+@media (max-height: 680px) {
+  .quiz-content { padding: 8px 12px 10px; }
+  .question-card { padding: 12px 14px; margin-bottom: 8px; }
+  .question-text { font-size: 15px; margin-bottom: 8px; }
+  .question-hint { display: none; }
+  .option-item { padding: 7px 10px; }
+  .option-label { font-size: 13px; }
+  .btn-nav { padding: 9px; font-size: 14px; }
 }
