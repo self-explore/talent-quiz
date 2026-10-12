@@ -572,6 +572,127 @@ body {
   border-left: 4px solid #7c5cfc;
 }
 
+/* 专属金句 */
+.quote-hero {
+  background: linear-gradient(135deg, #7c5cfc, #a78bfa);
+  color: #fff;
+  border-radius: 16px;
+  padding: 24px 22px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 24px rgba(124,92,252,0.25);
+}
+
+/* 历史原型人物 */
+.archetype-card .arch-inner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.arch-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c5cfc, #6a48f5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.arch-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+}
+.arch-title {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+.arch-words {
+  font-size: 15px;
+  color: #6a48f5;
+  font-weight: 600;
+  padding: 10px 14px;
+  background: #f5f0ff;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.arch-why {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+/* 心理行为分析 */
+.analysis-text {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.85;
+}
+
+/* 天赋优点 */
+.strengths-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.strengths-list li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.6;
+}
+.strengths-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #7c5cfc, #a78bfa);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 最适合岗位 */
+.best-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.best-role {
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #7c5cfc, #6a48f5);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 3px 12px rgba(124,92,252,0.25);
+}
+.result-subtitle {
+  font-size: 13px;
+  color: #9ca3af;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
 .btn-restart {
   display: block;
   width: 100%;
