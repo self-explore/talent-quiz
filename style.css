@@ -301,7 +301,7 @@ body {
 
 .quiz-content {
   background: #f5f3ff;
-  min-height: calc(100vh - 48px);
+  min-height: calc(100vh - 56px);
   padding: 10px 14px 12px;
   max-width: 520px;
   margin: 0 auto;
