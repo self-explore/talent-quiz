@@ -189,10 +189,41 @@ function showResult() {
   const content = document.getElementById('result-content');
   content.innerHTML = `
     <!-- 天赋类型卡片 -->
-    <div class="result-card">
+    <div class="result-card type-hero">
       <div class="result-type-badge">你的天赋类型</div>
       <div class="result-type-name">${talentType.name}</div>
       <div class="result-type-desc">${talentType.desc}</div>
+    </div>
+
+    <!-- 专属金句 -->
+    <div class="quote-hero">“${talentType.quote}”</div>
+
+    <!-- 历史原型人物 -->
+    <div class="result-card archetype-card">
+      <div class="result-section-title">你的历史原型人物</div>
+      <div class="arch-inner">
+        <div class="arch-avatar">${talentType.archetype.name.charAt(0)}</div>
+        <div class="arch-info">
+          <div class="arch-name">${talentType.archetype.name}</div>
+          <div class="arch-title">${talentType.archetype.title}</div>
+        </div>
+      </div>
+      <div class="arch-words">「${talentType.archetype.words}」</div>
+      <div class="arch-why">${talentType.archetype.why}</div>
+    </div>
+
+    <!-- 心理行为天赋分析 -->
+    <div class="result-card">
+      <div class="result-section-title">心理行为天赋分析</div>
+      <div class="analysis-text">${talentType.analysis}</div>
+    </div>
+
+    <!-- 天赋优点 -->
+    <div class="result-card">
+      <div class="result-section-title">你的天赋优点</div>
+      <ul class="strengths-list">
+        ${talentType.strengths.map(s => `<li>${s}</li>`).join('')}
+      </ul>
     </div>
 
     <!-- 维度得分 -->
@@ -211,9 +242,13 @@ function showResult() {
       `).join('')}
     </div>
 
-    <!-- 适合职业 -->
+    <!-- 适合岗位 -->
     <div class="result-card">
-      <div class="result-section-title">推荐职业方向</div>
+      <div class="result-section-title">最适合你的岗位</div>
+      <div class="best-roles">
+        ${talentType.bestRoles.map(r => `<span class="best-role">${r}</span>`).join('')}
+      </div>
+      <div class="result-subtitle">相关职业方向</div>
       <div class="career-tags">
         ${talentType.careers.map(c => `<span class="career-tag">${c}</span>`).join('')}
       </div>
